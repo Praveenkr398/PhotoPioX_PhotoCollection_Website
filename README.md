@@ -15,3 +15,4 @@ Live view: https://praveenkr398.github.io/PhotoPioX_PhotoCollection_Website
 ✔️ HTML – Structured and semantic layout
 ✔️ CSS – Stunning visual design and responsive styles
 ✔️ JavaScript – Interactive elements for an engaging experience
+![JavaScript Project](https://github.com/user-attachments/assets/ed0482df-48cc-4a9f-b8ac-a9ed4e45cac4)
