@@ -1,0 +1,284 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: capitalize;
+}
+
+header {
+    background: rgb(0, 0, 0);
+    height: 50px;
+
+}
+
+/* search box */
+#searchImgBox {
+    width: 100%;
+    height: auto;
+    display: flex;
+    user-select: none;
+    flex-direction: column;
+    animation-name: point1;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+}
+#searchImgBox::after{
+    content: "";
+    width: 30px ;
+    height: 7px;
+    background-color: red;
+    z-index: 1;
+    position: absolute;
+    border-radius: 10px;
+    left: 10px;
+    top: 420px;
+    animation-name: point1;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+}
+
+@keyframes point1 {
+    0%{
+        left:5%;
+    top: 420px;
+    
+    }
+
+    100%{
+        left: 95%;
+    top: 420px;
+    
+    }
+}
+
+
+.bgImg {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(255, 255, 255, 0.125), rgb(0, 0, 0)), url('images/banner2.png');
+    background-size: cover;
+    background-position:center;
+    height: 50vh;
+}
+
+.bgImg h1 {
+    font-size: 40px;
+    text-decoration: underline;
+    text-underline-offset:15px;
+    text-decoration-thickness: 1px;
+    text-shadow: 1px 1px 1px red;
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+}
+
+.bgImg h1::after{
+    content: '';
+    width: 10px ;
+    height: 10px;
+    background-color: red;
+    z-index: 1;
+    position: absolute;
+    border-radius: 10px;
+    left: 450px;
+    top: 204px;
+    animation-name: point;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+}
+@keyframes point {
+    0%{
+        left: 450px;
+        top: 204px;
+      
+    }
+    100%{
+        left: 1055px;
+        top: 204px;
+        color: blue;
+    }
+}
+
+.bgImg h3 {
+    text-shadow: 1px 4px 10px rgb(0, 18, 212);
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: -1px;
+    color: white;
+}
+
+.bgImg .searchbox {
+    width: 30%;
+    display: flex;
+    border-radius: 50px;
+    border: 2px solid rgb(253, 227, 227);
+    box-shadow: 3px 4px 30px rgb(97, 93, 93), -4px -4px 10px black;
+}
+
+
+.searchbox input {
+    background-color: transparent;
+    padding: 10px 20px;
+    font-size: 17px;
+    flex: 1;
+    color: rgb(252, 233, 233);
+    border: none;
+    cursor:auto ;
+}
+
+.searchbox input:focus {
+    background-color: white;
+    color: black;
+    outline: none;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+.searchbox button {
+    padding: 4px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: none;
+    background-color: rgb(255, 109, 4);
+    color: white;
+    letter-spacing: 1px;
+    border-left: 2px solid white;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    cursor: pointer;
+}
+
+.searchbox button:hover {
+    background-color: chocolate;
+
+}
+
+/*  code for image search result */
+
+.imgSearchResult .resultImg {
+    width: 100%;
+    height: auto;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.resultImg .imgs {
+    width: 250px;
+    height:250px;
+transition: .3s ease-in;
+position: relative;
+overflow: hidden;
+}
+.imgs img{
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    width: 100%;
+    height: inherit;
+}
+
+.resultImg .imgs:hover{
+    transform: scale(1.1);
+    filter: contrast(1.2);
+    transition: .3s ease;
+    box-shadow: 3px 1px 10px rgb(255, 147, 147);
+    z-index: 2;
+    
+}
+.resultImg:hover img{
+    bottom: 0px;
+}
+
+.details .view{
+    background-color: transparent;
+    z-index: 3;
+    border: 2px solid wheat;
+    padding: 4px 10px;
+    border-radius:20px;
+    color: white;
+    box-shadow: 4px 4px 10px gray;
+  
+}
+
+.imgs .details{
+    position: absolute;
+    bottom: -50px;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    color: white;
+    justify-content: space-between;
+padding: 10px;
+padding-bottom: 30px;
+transition: .2s ease;
+}
+
+.imgs:hover .details, .imgs:hover.view{
+    bottom: 0px;
+    background: linear-gradient(to top, rgb(0, 0, 0) , rgba(0, 0, 0, 0.092));
+}
+
+.details .view:hover{
+    background-color: chocolate;
+    color: wheat;
+    cursor: pointer;
+}
+
+
+
+.details .download{
+    background-color: rgb(255, 145, 0);
+    padding: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.details>.download:hover{
+    transform: scale(1.1);
+    box-shadow: 3px 3px 10px rgb(221, 142, 6);
+}
+
+.imgs .user {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    gap: 40px;
+    width: 95%;
+    overflow: scroll;
+    scrollbar-width: none;
+    text-wrap: nowrap;
+    color: white;
+}
+
+#moreBtn{
+    padding: 4px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    width: 100px;
+    margin: 10px auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 2px solid chocolate;
+    color: rgb(0, 0, 0);
+    letter-spacing: 1px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+#moreBtn:hover{
+    background-color: rgb(255, 109, 4);
+    transition: .5s ease-in-out;
+    color: white;
+
+}

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- animatino on scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Search image : APi Images</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="image.css">
+</head>
+
+<body>
+    <!-- heading section  -->
+
+    <header>
+        <nav>
+            <a href="#" class="logo">Photo<span>X</span>pio</a>
+            <div class="navlist">
+                <ul class="nav">
+                    <li class="navItems"><a class="active" href="index.html">Home </a></li>
+                    <li class="navItems"><a href="index.html#gallery">Gallery </a></li>
+                    <li class="navItems"><a href="index.html#about">About </a></li>
+                    <li class="navItems"><a href="index.html#contact">Contact </a></li>
+
+                </ul>
+            </div>
+
+            <div class="rightNav">
+                <a href="ImageApi.html">Generate
+                    <span class="material-symbols-outlined move">
+                        camera
+                    </span>
+                </a>
+            </div>
+        </nav>
+
+    </header>
+
+    <!-- image search header -->
+    <section id="searchImgBox">
+        <div class="bgImg">
+            <h1>Image Search Engine - API</h1>
+            <h3>search and donwload any image within a second</h3>
+            <div class="searchbox">
+                <input type="search" id="searchBox" placeholder="example: cat,dog, nature">
+                <button id="searchBtn">Search</button>
+            </div>
+        </div>
+
+
+        <!-- image search result page -->
+        <div class="imgSearchResult">
+            <div class="resultImg">
+
+                <div class="imgs"> 
+                    <img src="images/animal.webp">
+                    <div class="user">
+                        <i class="fas fa-camera"></i>
+                        <span>picture</span>
+                    </div>
+                    <div class="details">
+                        <div class="view">View</div>
+
+                        <div class="download">
+                            <i class="fas fa-download"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="imgs"> <img src="images/animal3.jpg"> </div>
+                <div class="imgs"> <img src="images/animal.webp"> </div>
+                <div class="imgs"> <img src="images/animal6.avif"> </div>
+                <div class="imgs"> <img src="images/animal5.jpg"> </div>
+                <div class="imgs"> <img src="images/animal.webp"> </div>
+                <div class="imgs"> <img src="images/animal.webp"> </div>
+                <div class="imgs"> <img src="images/animal.webp"> </div>
+                <div class="imgs"> <img src="images/animal9.webp"> </div>
+            </div>
+        </div>
+        <button id="moreBtn">More</button>
+        <button   onclick="downloadImage('images/animal9.webp')">Download Image</button>
+
+    </section>
+    
+
+
+    <!-- footer section -->
+    <footer><span>Footer Section</span>
+
+        <!-- subscrbie section -->
+        <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500" class="newsletter">
+
+            <div class="n-info">
+                <h2>&#128639; Subscribe Our Newsletter &#128638; </h2>
+                <p>Alert! if you write your email then Subscribe, i'll receive it.</p>
+            </div>
+            <form action="https://formsubmit.co/isaiyaaji@gmail.com" method="" class="n-box">
+                <label for="newsletter">
+                    <input type="email" id="newsletter" placeholder="Enter your Email Here">
+                    <button>Subscribe</button>
+                </label>
+            </form>
+        </div>
+
+        <!-- footer navigation section -->
+        <div class="navigation">
+            <div class="fn fn-info " data-aos="flip-left" data-aos-offset="100" data-aos-easing="linear"
+                data-aos-duration="300">
+                <h2>Contact</h2>
+                <address>
+                    Ram Krishna Nagar <br>
+                    Pincode: 800021 <br>
+                    City: Patna, <br>
+                    State: Bihar <br>
+                </address>
+                <div class="social">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+            </div>
+            <div class="fn fn-details" data-aos="flip-left" data-aos-offset="100" data-aos-easing="linear"
+                data-aos-duration="300">
+                <h2>Details</h2>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#post">BlogPost</a>
+                <a href="#">Pricing</a>
+            </div>
+            <div class="fn fn-links" data-aos="flip-left" data-aos-offset="100" data-aos-easing="linear"
+                data-aos-duration="300">
+                <h2><i class="fa-solid fa-link"></i> Useful Links</h2>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#post">BlogPost</a>
+                <a href="#">Pricing</a>
+            </div>
+            <div class="fn fn-help" data-aos="flip-left" data-aos-offset="100" data-aos-easing="linear"
+                data-aos-duration="300">
+                <h2><i class="fa-solid fa-circle-info"></i> Help & Support</h2>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#post">BlogPost</a>
+                <a href="#">Pricing</a>
+            </div>
+        </div>
+
+        <p id="bottom">&copy; 2025 all right reverse <a href="https://github.com/Praveenkr398">Web2Code</a></p>
+    </footer>
+
+    <!-- bottom to top buttom -->
+    <button class="btnTop" onclick="scrolltoTop()">
+        &#9195;
+    </button>
+    <!-- top to bottom buttom ok -->
+    <a href="#bottom" class="btnBottom">&#9196;</a>
+
+
+    <script src="script.js"></script>
+    <!-- animation on scroll  -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script src="image.js" type="module"></script>
+    <!-- website: https://michalsnik.github.io/aos/ -->
+</body>
+
+</html>
