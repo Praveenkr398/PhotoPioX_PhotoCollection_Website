@@ -3,6 +3,11 @@
     text-transform: capitalize;
 }
 
+.gen{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
 header {
     background: rgb(0, 0, 0);
     height: 50px;
@@ -42,13 +47,13 @@ header {
 @keyframes point1 {
     0%{
         left:5%;
-    top: 420px;
+    top: 56vh;
     
     }
 
     100%{
         left: 95%;
-    top: 420px;
+    top: 56vh;
     
     }
 }
@@ -95,12 +100,12 @@ header {
 @keyframes point {
     0%{
         left: 450px;
-        top: 204px;
+        top: 26vh;
       
     }
     100%{
         left: 1055px;
-        top: 204px;
+        top:26vh;
         color: blue;
     }
 }
@@ -162,38 +167,34 @@ header {
 
 /*  code for image search result */
 
-.imgSearchResult .resultImg {
-    width: 100%;
-    height: auto;
-    margin: 30px auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-    align-items: center;
+ .resultImg {
+   max-width: 90%;
+margin: 50px auto;
+    columns: 5 250px;
 }
 
 .resultImg .imgs {
-    width: 250px;
-    height:250px;
+width: 100%;   
 transition: .3s ease-in;
 position: relative;
 overflow: hidden;
+border: 1px solid gray;
+border-radius: 10px;
+margin: 5px;
 }
 .imgs img{
     background-position: center;
-    background-size: cover;
-    border-radius: 10px;
+    background-size: contain;
+    border-radius: 2px;
     width: 100%;
-    height: inherit;
+    height: 100%;
+   object-fit:contain;
 }
 
-.resultImg .imgs:hover{
+.resultImg img:hover{
     transform: scale(1.1);
     filter: contrast(1.2);
     transition: .3s ease;
-    box-shadow: 3px 1px 10px rgb(255, 147, 147);
     z-index: 2;
     
 }
@@ -247,6 +248,7 @@ transition: .2s ease;
 }
 .details>.download:hover{
     transform: scale(1.1);
+
     box-shadow: 3px 3px 10px rgb(221, 142, 6);
 }
 
@@ -281,4 +283,120 @@ transition: .2s ease;
     transition: .5s ease-in-out;
     color: white;
 
+}
+
+/* preview image card on window */
+
+.preview{
+    max-width: 70%;
+    height:70vh;
+    border:1px solid black;
+    z-index: 99;
+    scroll-snap-stop: always;
+   position: fixed;
+   align-self:center;
+   top: 90px;
+   display: none;
+   transition: .2s ease;
+   justify-content: space-between;
+   background-color: rgb(246, 240, 240);
+   border: 2px solid gray;
+}
+.pleft{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .2s ease-in;
+    background-color: rgb(243, 248, 243);
+    border-right: 50px solid rgb(219, 219, 224);
+}
+.pleft>img{
+    filter: contrast(1.5);
+    width: 90%;
+    max-height: 90%;
+   border-radius: 10px;
+   
+}
+
+.pleft>img:hover{
+    transform: scale(1.05);
+    transition: .4s ease-out;
+    box-shadow: 4px 4px 10px gray, -2px -2px 10px gray;
+}
+
+
+.pright{
+    width: 50%;
+margin: 50px 20px;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+display: flex;
+flex-direction: column;
+gap: 2rem;
+
+}
+
+.scat{
+    font-size: 20px;
+    color: gray;
+}
+
+.pright h3, h4{
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.pright span , p{
+    font-size: 20px;
+    color: rgb(48, 48, 48);
+    font-weight: 500;
+    word-wrap:break-word;
+    line-height: 2rem;
+}
+
+.pright button{
+    padding: 10px 50px;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: none;
+    background-color: rgb(248, 140, 63);
+    color: black;
+    letter-spacing: 1px;
+    border-left: 2px solid white;
+    cursor: pointer;
+    width: fit-content;
+    align-self: safe;
+
+}
+
+.pright button:hover{
+    background-color: rgb(255, 108, 2);
+    color: white;
+}
+
+.pright .close{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: rgb(213, 206, 206);
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    animation: close 1s alternate 3s infinite  ;
+}
+
+@keyframes close {
+    0%{
+       font-size: 22px;
+    }
+    100%{
+        font-weight: 25px;
+        transform: rotate(90deg);
+    }
+}
+
+.close:hover{
+    transition: .3s ease;
 }
