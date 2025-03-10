@@ -2,31 +2,14 @@ let searchBox = document.querySelector("#searchBox");
 let searchBtn = document.querySelector("#searchBtn");
 let resultImg = document.querySelector(".resultImg");
 let moreBtn = document.querySelector("#moreBtn");
+
 let query = "";
 let page = 1;
 
 let apiKeys = "SuCFTuKTWSRuQAwza8ieOBD6ZatF3Uh3c88Lie0rPA3sfgjx5PilEYEN";
 
-// donwload image
-
-function downloadImage(imageUrl, filename) {
-  fetch(imageUrl)
-    .then((response) => response.blob()) // Convert image to Blob
-    .then((blob) => {
-      const url = URL.createObjectURL(blob); // Create a local URL for the Blob
-      const link = document.createElement("a");
-      link.href = url;
-      link.download = filename;
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      URL.revokeObjectURL(url); // Release memory
-    })
-    .catch((error) => console.error("Error downloading image:", error));
-}
-
 async function searchImages() {
-  console.log("ruuing");
+  console.log("running");
 
   query = searchBox.value;
 
@@ -50,20 +33,21 @@ async function searchImages() {
     resultImg.innerHTML = "";
   }
 
-  results.forEach((result) => {
-    console.log(result)
+  results.map((result) => {
+    // console.log(result)
+    var result ;
     let imgs = document.createElement("div");
     imgs.classList.add("imgs");
 
-    let imgBox = `<img src=${result.src.tiny}>
+    var imgBox = `<img src="${result.src.original}">
                     <div class="user">
                         <i class="fas fa-camera"></i>
                         <span>${result.alt}</span>
                     </div>
                     <div class="details">
-                        <div class="view">View</div>
+                        <div class="view" >View</div>
 
-                        <div class="download" onclick=download("${result.src.tiny}")>
+                       <div class="download">
                             <i class="fas fa-download"></i>
                         </div>
                     </div>`;
@@ -74,13 +58,13 @@ async function searchImages() {
   });
 }
 
+
 // enter key: search result
 searchBox.addEventListener("keyup", (e) => {
   page = 1;
   if (e.key == "Enter") {
     searchImages();
     searchBox.value = "";
-   
   }
 });
 
@@ -95,3 +79,22 @@ moreBtn.addEventListener("click", () => {
   page++;
   searchImages();
 });
+
+
+
+// these will not work on online loaded image
+let preview = document.querySelector(".preview");
+
+let imgs = document.querySelectorAll(".imgs img");
+imgs.forEach((view) => {
+  view.addEventListener("click", (e) => {
+    preview.style.display = "flex";
+    console.log(e.target.src);
+  });
+});
+
+let close = document.querySelector(".close");
+close.addEventListener("click", () => {
+  preview.style.display = "none";
+  preview.style.transition = "1s ease-in";
+})
