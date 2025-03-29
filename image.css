@@ -286,17 +286,23 @@ transition: .2s ease;
 }
 
 /* preview image card on window */
+.prevbox{
+  display: none;
+  justify-content: center;
+  align-items: center;
+ 
+}
 
 .preview{
-    max-width: 70%;
-    height:70vh;
+    max-width: 50%;
+    height:60vh;
     border:1px solid black;
     z-index: 99;
     scroll-snap-stop: always;
    position: fixed;
    align-self:center;
    top: 90px;
-   display: none;
+   display: flex;
    transition: .2s ease;
    justify-content: space-between;
    background-color: rgb(246, 240, 240);
@@ -332,7 +338,7 @@ margin: 50px 20px;
 font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 display: flex;
 flex-direction: column;
-gap: 2rem;
+gap: 1rem;
 
 }
 
