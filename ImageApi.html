@@ -16,163 +16,167 @@
 
 <body>
     <!-- heading section  -->
-<div class="gen">
-    <header>
-        <nav>
-            <a href="#" class="logo">Photo<span>X</span>pio</a>
-            <div class="navlist">
-                <ul class="nav">
-                    <li class="navItems"><a class="active" href="index.html">Home </a></li>
-                    <li class="navItems"><a href="index.html#gallery">Gallery </a></li>
-                    <li class="navItems"><a href="index.html#about">About </a></li>
-                    <li class="navItems"><a href="index.html#contact">Contact </a></li>
+    <div class="gen">
+        <header>
+            <nav>
+                <a href="#" class="logo">Photo<span>X</span>pio</a>
+                <div class="navlist">
+                    <ul class="nav">
+                        <li class="navItems"><a class="active" href="index.html">Home </a></li>
+                        <li class="navItems"><a href="index.html#gallery">Gallery </a></li>
+                        <li class="navItems"><a href="index.html#about">About </a></li>
+                        <li class="navItems"><a href="index.html#contact">Contact </a></li>
 
-                </ul>
+                    </ul>
+                </div>
+
+                <div class="rightNav">
+                    <a href="ImageApi.html">Generate
+                        <span class="material-symbols-outlined move">
+                            camera
+                        </span>
+                    </a>
+                </div>
+            </nav>
+
+        </header>
+
+        <!-- image search header -->
+        <section id="searchImgBox">
+            <div class="bgImg">
+                <h1>Image Search Engine - API</h1>
+                <h3>search and donwload any image within a second</h3>
+                <div class="searchbox">
+                    <input type="search" id="searchBox" placeholder="example: cat,dog, nature">
+                    <button id="searchBtn">Search</button>
+                </div>
             </div>
 
-            <div class="rightNav">
-                <a href="ImageApi.html">Generate
-                    <span class="material-symbols-outlined move">
-                        camera
-                    </span>
-                </a>
-            </div>
-        </nav>
 
-    </header>
+            <!-- image search result page -->
+            <div class="imgSearchResult">
+                <div class="resultImg">
 
-    <!-- image search header -->
-    <section id="searchImgBox">
-        <div class="bgImg">
-            <h1>Image Search Engine - API</h1>
-            <h3>search and donwload any image within a second</h3>
-            <div class="searchbox">
-                <input type="search" id="searchBox" placeholder="example: cat,dog, nature">
-                <button id="searchBtn">Search</button>
-            </div>
-        </div>
+                    <div class="imgs">
+                        <img src="images/animal.webp">
+                        <div class="user">
+                            <i class="fas fa-camera"></i>
+                            <span>picture</span>
+                        </div>
+                        <div class="details">
+                            <div class="view">View</div>
 
-
-        <!-- image search result page -->
-        <div class="imgSearchResult">
-            <div class="resultImg">
-
-                <div class="imgs"> 
-                    <img src="images/animal.webp">
-                    <div class="user">
-                        <i class="fas fa-camera"></i>
-                        <span>picture</span>
-                    </div>
-                    <div class="details">
-                        <div class="view">View</div>
-
-                        <div class="download">
-                            <i class="fas fa-download"></i>
+                            <div class="download">
+                                <i class="fas fa-download"></i>
+                            </div>
                         </div>
                     </div>
+
+                    <div class="imgs"> <img src="images/animal3.jpg"> </div>
+                    <div class="imgs"> <img src="images/animal.webp"> </div>
+                    <div class="imgs"> <img src="images/animal6.avif"> </div>
+                    <div class="imgs"> <img src="images/animal5.jpg"> </div>
+                    <div class="imgs"> <img src="images/animal.webp"> </div>
+                    <div class="imgs"> <img src="images/animal.webp"> </div>
+                    <div class="imgs"> <img src="images/animal.webp"> </div>
+                    <div class="imgs"> <img src="images/animal9.webp"> </div>
                 </div>
-
-                <div class="imgs"> <img src="images/animal3.jpg"> </div>
-                <div class="imgs"> <img src="images/animal.webp"> </div>
-                <div class="imgs"> <img src="images/animal6.avif"> </div>
-                <div class="imgs"> <img src="images/animal5.jpg"> </div>
-                <div class="imgs"> <img src="images/animal.webp"> </div>
-                <div class="imgs"> <img src="images/animal.webp"> </div>
-                <div class="imgs"> <img src="images/animal.webp"> </div>
-                <div class="imgs"> <img src="images/animal9.webp"> </div>
             </div>
-        </div>
-        <button id="moreBtn">More</button>
-        
+            <button id="moreBtn">More</button>
 
-    </section>
 
-    <!-- preview image card -->
+        </section>
 
-    <div class="preview" >
-        <div class="pleft">
-            <img src="images/gen7.jpg" alt="image preview">
+        <!-- preview image card -->
+        <div class="prevbox">
+            <!-- <div class="preview">
+                <div class="pleft">
+                    <img src="images/gen7.jpg" alt="image preview">
+                </div>
+                <div class="pright">
+                    <div class="scat">category: dog</div>
+                    <h3>Title: <span>a Lorem ipsum doloa aperiam saepe nobis, inventore est fuga veritatis?
+                            Fuga?bueatiful dog picture</span></h3>
+                    <h3>Photographer: <span>jogn Doe</span></h3>
+                    <h4>Description: <p>Lorem ipsum dolor sit amet consectetuos animi totam iusto provident! Deserunt,
+                            delectus ducimus ratione officia ipsam temporibus fugiat.</p>
+                    </h4>
+                    <button>Download &#128639;</button>
+
+                    <div class="close">&#10060</div>
+                </div>
+            </div> -->
         </div>
-        <div class="pright">
-            <div class="scat">category: dog</div>
-            <h3>Title: <span>a Lorem ipsum doloa aperiam saepe nobis, inventore est fuga veritatis? Fuga?bueatiful dog picture</span></h3>
-            <h3>Photographer: <span>jogn Doe</span></h3>
-            <h4>Description: <p>Lorem ipsum dolor sit amet consectetuos animi totam iusto provident! Deserunt, delectus ducimus ratione officia ipsam temporibus fugiat.</p></h4>
-           <button >Download &#128639;</button>
-           
-           <div class="close">&#10060</div>
-        </div>
+
+
+
+        <!-- footer section -->
+        <footer><span>Footer Section</span>
+
+            <!-- subscrbie section -->
+            <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500" class="newsletter">
+
+                <div class="n-info">
+                    <h2>&#128639; Subscribe Our Newsletter &#128638; </h2>
+                    <p>Alert! if you write your email then Subscribe, i'll receive it.</p>
+                </div>
+                <form action="https://formsubmit.co/isaiyaaji@gmail.com" method="" class="n-box">
+                    <label for="newsletter">
+                        <input type="email" id="newsletter" placeholder="Enter your Email Here">
+                        <button>Subscribe</button>
+                    </label>
+                </form>
+            </div>
+
+            <!-- footer navigation section -->
+            <div class="navigation">
+                <div class="fn fn-info " data-aos="flip-left" data-aos-offset="100" data-aos-easing="linear"
+                    data-aos-duration="300">
+                    <h2>Contact</h2>
+                    <address>
+                        Ram Krishna Nagar <br>
+                        Pincode: 800021 <br>
+                        City: Patna, <br>
+                        State: Bihar <br>
+                    </address>
+                    <div class="social">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-youtube"></i>
+                    </div>
+                </div>
+                <div class="fn fn-details" data-aos="flip-left" data-aos-offset="100" data-aos-easing="linear"
+                    data-aos-duration="300">
+                    <h2>Details</h2>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#gallery">Gallery</a>
+                    <a href="#post">BlogPost</a>
+                    <a href="#">Pricing</a>
+                </div>
+                <div class="fn fn-links" data-aos="flip-left" data-aos-offset="100" data-aos-easing="linear"
+                    data-aos-duration="300">
+                    <h2><i class="fa-solid fa-link"></i> Useful Links</h2>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#gallery">Gallery</a>
+                    <a href="#post">BlogPost</a>
+                    <a href="#">Pricing</a>
+                </div>
+                <div class="fn fn-help" data-aos="flip-left" data-aos-offset="100" data-aos-easing="linear"
+                    data-aos-duration="300">
+                    <h2><i class="fa-solid fa-circle-info"></i> Help & Support</h2>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#gallery">Gallery</a>
+                    <a href="#post">BlogPost</a>
+                    <a href="#">Pricing</a>
+                </div>
+            </div>
+
+            <p id="bottom">&copy; 2025 all right reverse <a href="https://github.com/Praveenkr398">Web2Code</a></p>
+        </footer>
     </div>
-    
-
-
-    <!-- footer section -->
-    <footer><span>Footer Section</span>
-
-        <!-- subscrbie section -->
-        <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500" class="newsletter">
-
-            <div class="n-info">
-                <h2>&#128639; Subscribe Our Newsletter &#128638; </h2>
-                <p>Alert! if you write your email then Subscribe, i'll receive it.</p>
-            </div>
-            <form action="https://formsubmit.co/isaiyaaji@gmail.com" method="" class="n-box">
-                <label for="newsletter">
-                    <input type="email" id="newsletter" placeholder="Enter your Email Here">
-                    <button>Subscribe</button>
-                </label>
-            </form>
-        </div>
-
-        <!-- footer navigation section -->
-        <div class="navigation">
-            <div class="fn fn-info " data-aos="flip-left" data-aos-offset="100" data-aos-easing="linear"
-                data-aos-duration="300">
-                <h2>Contact</h2>
-                <address>
-                    Ram Krishna Nagar <br>
-                    Pincode: 800021 <br>
-                    City: Patna, <br>
-                    State: Bihar <br>
-                </address>
-                <div class="social">
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-youtube"></i>
-                </div>
-            </div>
-            <div class="fn fn-details" data-aos="flip-left" data-aos-offset="100" data-aos-easing="linear"
-                data-aos-duration="300">
-                <h2>Details</h2>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-                <a href="#gallery">Gallery</a>
-                <a href="#post">BlogPost</a>
-                <a href="#">Pricing</a>
-            </div>
-            <div class="fn fn-links" data-aos="flip-left" data-aos-offset="100" data-aos-easing="linear"
-                data-aos-duration="300">
-                <h2><i class="fa-solid fa-link"></i> Useful Links</h2>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-                <a href="#gallery">Gallery</a>
-                <a href="#post">BlogPost</a>
-                <a href="#">Pricing</a>
-            </div>
-            <div class="fn fn-help" data-aos="flip-left" data-aos-offset="100" data-aos-easing="linear"
-                data-aos-duration="300">
-                <h2><i class="fa-solid fa-circle-info"></i> Help & Support</h2>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-                <a href="#gallery">Gallery</a>
-                <a href="#post">BlogPost</a>
-                <a href="#">Pricing</a>
-            </div>
-        </div>
-
-        <p id="bottom">&copy; 2025 all right reverse <a href="https://github.com/Praveenkr398">Web2Code</a></p>
-    </footer>
-</div>
     <!-- bottom to top buttom -->
     <button class="btnTop" onclick="scrolltoTop()">
         &#9195;
