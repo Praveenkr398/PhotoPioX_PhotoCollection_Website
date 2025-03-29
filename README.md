@@ -5,10 +5,8 @@
 1️⃣ A **static photo gallery** with filtering and animation effects.  
 2️⃣ A **searchable image gallery**, powered by an **API**, allowing users to find and view high-quality images.  
 
-## 🚀 **Live Demo:** 
-[PhotoPiox](https://praveenkr398.github.io/PhotoPioX_PhotoCollection_Website/)  
-## 💻 **Source Code:** 
-[GitHub Repository](https://github.com/Praveenkr398/PhotoPioX_PhotoCollection_Website)  
+## 🚀 **Live Demo:** [PhotoPiox](https://praveenkr398.github.io/PhotoPioX_PhotoCollection_Website/)  
+## 💻 **Source Code:** GitHub Repository](https://github.com/Praveenkr398/PhotoPioX_PhotoCollection_Website)  
 
 ## 🎯 Key Features  
 
