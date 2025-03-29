@@ -1,4 +1,4 @@
-# 📸 PhotoPiox – Photo Collection Website  
+![screenshot_3_29_2025_3-49-20 PM](https://github.com/user-attachments/assets/f49d671f-371b-405d-a2a8-318fca7b7317)# 📸 PhotoPiox – Photo Collection Website  
 
 ## 🌟 About the Project  
 **PhotoPiox** is a **dynamic photo collection website** built using **HTML, CSS, and JavaScript**. It offers users a **beautifully designed gallery** with two pages:  
@@ -19,6 +19,7 @@
 ✅ **Newsletter & Links** – Subscription option for updates.  
 
 
+
 ### 🔍 **Page 2: API-Based Image Search**  
 ✅ **Search Functionality** – Users can search for images dynamically.  
 ✅ **Default Image Set** – Displays **30 animal images** by default.  
@@ -27,7 +28,8 @@
    - Enlarged image preview  
    - Image details  
    - **Full-Screen Mode**
-![Uploading image.png…]()
+
+![PhotoPiox Preview](https://github.com/user-attachments/assets/31030cb8-09bb-44a9-89b9-8d1a7abdd88c)
 
 
 ## 🛠️ Technologies Used  
@@ -36,7 +38,7 @@
 ✔ **JavaScript** – Interactivity & API integration  
 
 ## 📌 Project Preview  
-![PhotoPiox Preview](preview.png)  
+![PhotoPiox Preview]()  
 
 ## 📩 Contact  
 📧 Feel free to reach out via **[LinkedIn](inkedin.com/in/Praveenkr398)**
