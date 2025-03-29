@@ -14,9 +14,9 @@ async function searchImages() {
   query = searchBox.value;
 
   if (query === "") {
-    query = "nature";
+    query = "animal";
   }
-  const url = `https://api.pexels.com/v1/search/?page=${page}&per_page=10&query=${query}`;
+  const url = `https://api.pexels.com/v1/search/?page=${page}&per_page=30&query=${query}`;
 
   let response = await fetch(url, {
     headers: { Authorization: apiKeys },
@@ -35,11 +35,12 @@ async function searchImages() {
 
   results.map((result) => {
     // console.log(result)
-    var result ;
+    console.log(result);
+    var result;
     let imgs = document.createElement("div");
     imgs.classList.add("imgs");
 
-    var imgBox = `<img src="${result.src.original}">
+    var imgBox = `<img src="${result.src.medium}">
                     <div class="user">
                         <i class="fas fa-camera"></i>
                         <span>${result.alt}</span>
@@ -47,17 +48,53 @@ async function searchImages() {
                     <div class="details">
                         <div class="view" >View</div>
 
-                       <div class="download">
+                       <div class="download" >
+                            <a href="${result.src.large}" download="${result.src.large}">
                             <i class="fas fa-download"></i>
+                        </a>
                         </div>
                     </div>`;
 
     imgs.innerHTML = imgBox;
     resultImg.appendChild(imgs);
     searchBox.value = "";
-  });
-}
 
+
+    // preview image
+    let img = imgs.querySelectorAll(".view");
+    img.forEach((view) => {
+      view.addEventListener("click", () => {
+        let preview = document.createElement("div");
+        preview.classList.add("preview");
+        preview.innerHTML = ` 
+    <div class="pleft">
+    <img src="${result.src.portrait}" alt="image preview">
+    </div>
+    <div class="pright">
+    <div class="scat">image Id: ${result.id}</div>
+    <h3>Info: <span>${result.alt}</span></h3>
+    <h3>Photographer: <span>${result.photographer}</span></h3>
+    <button ><a href="${result.src.large}" download>Full Screen &#128639;</a></button>
+    <div class="close">&#10060</div>
+    
+    </div>`;
+        let prevbox = document.querySelector(".prevbox");
+        prevbox.appendChild(preview);
+        prevbox.style.display = "flex";
+
+        let close = preview.querySelector(".close");
+        close.addEventListener("click", () => {
+          preview.style.display = "none";
+          preview.style.transition = "1s ease-in";
+        });
+      });
+      
+    });
+    
+  });
+
+  
+}
 
 // enter key: search result
 searchBox.addEventListener("keyup", (e) => {
@@ -79,22 +116,3 @@ moreBtn.addEventListener("click", () => {
   page++;
   searchImages();
 });
-
-
-
-// these will not work on online loaded image
-let preview = document.querySelector(".preview");
-
-let imgs = document.querySelectorAll(".imgs img");
-imgs.forEach((view) => {
-  view.addEventListener("click", (e) => {
-    preview.style.display = "flex";
-    console.log(e.target.src);
-  });
-});
-
-let close = document.querySelector(".close");
-close.addEventListener("click", () => {
-  preview.style.display = "none";
-  preview.style.transition = "1s ease-in";
-})
