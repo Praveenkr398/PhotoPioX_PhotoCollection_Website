@@ -1,4 +1,4 @@
-![screenshot_3_29_2025_3-49-20 PM](https://github.com/user-attachments/assets/f49d671f-371b-405d-a2a8-318fca7b7317)# 📸 PhotoPiox – Photo Collection Website  
+# 📸 PhotoPiox – Photo Collection Website  
 
 ## 🌟 About the Project  
 **PhotoPiox** is a **dynamic photo collection website** built using **HTML, CSS, and JavaScript**. It offers users a **beautifully designed gallery** with two pages:  
