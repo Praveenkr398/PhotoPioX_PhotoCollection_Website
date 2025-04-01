@@ -49,7 +49,7 @@ async function searchImages() {
                         <div class="view" >View</div>
 
                        <div class="download" >
-                            <a href="${result.src.large}" download="${result.src.large}">
+                            <a href="${result.src.large}" target="_blank" download="${result.src.large}">
                             <i class="fas fa-download"></i>
                         </a>
                         </div>
