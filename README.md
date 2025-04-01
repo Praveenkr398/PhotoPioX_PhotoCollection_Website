@@ -32,7 +32,7 @@
 ![PhotoPiox Preview](https://github.com/user-attachments/assets/31030cb8-09bb-44a9-89b9-8d1a7abdd88c)
 
 
-Category:- "Website, HTML, CSS, JavaScrpit, Api"
+Category:- "Website, HTML, CSS, JavaScrpit, Api, Top"
 
 ## 🛠️ Technologies Used  
 ✔ **HTML** – Structure of the website  
